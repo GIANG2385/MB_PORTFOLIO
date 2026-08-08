@@ -245,12 +245,7 @@ export const StarryBackgroundCanvas: React.FC<StarryBackgroundCanvasProps> = ({ 
       }
       ctx.globalAlpha = 1;
 
-      // Render bottom right iconic 4-point sparkle diamond star
       diamondPhase += 0.025;
-      const diamondAlpha = 0.75 + Math.sin(diamondPhase) * 0.25;
-      const diamondX = width - 80;
-      const diamondY = height - 90;
-      draw4PointStar(diamondX, diamondY, 22, 4, diamondAlpha);
 
       // Render upper right small sparkle star
       draw4PointStar(width * 0.88, height * 0.18, 12, 2.5, 0.6 + Math.cos(diamondPhase * 1.2) * 0.3);
