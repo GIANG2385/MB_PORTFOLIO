@@ -6,6 +6,7 @@ export interface ProjectItem {
   meta: string;
   role: string;
   link: string;
+  image?: string;
   description: string;
   responsibilities: string[];
   challenges: string;

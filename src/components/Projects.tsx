@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ExternalLink, X, ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import { ProjectItem } from '../types';
+import pangPangImg from '../assets/projects/pang-pang.jpg';
+import aegisImg from '../assets/projects/aegis.jpg';
 
 export const Projects: React.FC = () => {
   const [activeProject, setActiveProject] = useState<ProjectItem | null>(null);
@@ -14,6 +16,7 @@ export const Projects: React.FC = () => {
       meta: 'Personal Project · 2026',
       role: 'Full Stack',
       link: 'https://github.com/GIANG2385/FINAL',
+      image: pangPangImg,
       description:
         'Pang Pang SmartOps is an AI-powered restaurant operations platform covering ordering, kitchen operations, inventory, reservations, and loyalty. The platform provides restaurant managers with a centralized view of operational performance and real-time insights.',
       responsibilities: [
@@ -47,6 +50,7 @@ export const Projects: React.FC = () => {
       meta: 'Team Project · Jul 2026',
       role: 'Business Analyst',
       link: 'https://aegis-care-one.vercel.app/',
+      image: aegisImg,
       description:
         'Aegis is an AI-powered clinic operations assistant integrated with CRM/HIS to optimize clinical workflows through AI-assisted knowledge retrieval, patient record summarization, and workflow support.',
       responsibilities: [
@@ -118,42 +122,98 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projectsList.map((project) => (
-            <div
-              key={project.id}
-              onClick={() => setActiveProject(project)}
-              className="group bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between cursor-pointer"
-            >
-              <div>
-                <span className="font-montserrat text-3xl font-black text-[#001bb7]/15 group-hover:text-[#001bb7]/25 transition-colors">
-                  {project.number}
-                </span>
-                <h3 className="font-montserrat text-xl font-black text-[#0f172a] mt-2 mb-1 group-hover:text-[#001bb7] transition-colors">
-                  {project.title}
-                </h3>
-                <p className="font-be-vietnam text-sm font-semibold text-[#475569] mb-3">
-                  {project.subtitle}
-                </p>
-                <div className="flex flex-wrap items-center gap-2 mb-4">
-                  <span className="px-2.5 py-0.5 bg-[#001bb7]/10 text-[#001bb7] rounded-lg font-montserrat text-[11px] font-bold">
-                    {project.meta}
-                  </span>
-                  <span className="px-2.5 py-0.5 bg-slate-100 text-[#475569] rounded-lg font-montserrat text-[11px] font-bold">
-                    {project.role}
+        <div className="space-y-6">
+          {/* Top Row: Pang Pang & Aegis side by side, each with a cover image */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[projectsList[0], projectsList[1]].map((project) => (
+              <div
+                key={project.id}
+                onClick={() => setActiveProject(project)}
+                className="group bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              >
+                {project.image && (
+                  <div className="relative h-44 sm:h-52 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+                <div className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <span className="font-montserrat text-3xl font-black text-[#001bb7]/15 group-hover:text-[#001bb7]/25 transition-colors">
+                      {project.number}
+                    </span>
+                    <h3 className="font-montserrat text-xl font-black text-[#0f172a] mt-2 mb-1 group-hover:text-[#001bb7] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="font-be-vietnam text-sm font-semibold text-[#475569] mb-3">
+                      {project.subtitle}
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                      <span className="px-2.5 py-0.5 bg-[#001bb7]/10 text-[#001bb7] rounded-lg font-montserrat text-[11px] font-bold">
+                        {project.meta}
+                      </span>
+                      <span className="px-2.5 py-0.5 bg-slate-100 text-[#475569] rounded-lg font-montserrat text-[11px] font-bold">
+                        {project.role}
+                      </span>
+                    </div>
+                    <p className="font-be-vietnam text-xs sm:text-sm text-[#475569] leading-relaxed line-clamp-4">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <span className="mt-5 font-montserrat font-bold text-xs sm:text-sm text-[#001bb7] inline-flex items-center gap-2 pt-4 border-t border-slate-100">
+                    View Case Study
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
-                <p className="font-be-vietnam text-xs sm:text-sm text-[#475569] leading-relaxed line-clamp-4">
-                  {project.description}
-                </p>
               </div>
+            ))}
+          </div>
 
-              <span className="mt-5 font-montserrat font-bold text-xs sm:text-sm text-[#001bb7] inline-flex items-center gap-2 pt-4 border-t border-slate-100">
-                View Case Study
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </div>
-          ))}
+          {/* Bottom Row: Bitcoin Research, no image, full width */}
+          {(() => {
+            const project = projectsList[2];
+            return (
+              <div
+                key={project.id}
+                onClick={() => setActiveProject(project)}
+                className="group bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                  <div className="flex-1">
+                    <span className="font-montserrat text-3xl font-black text-[#001bb7]/15 group-hover:text-[#001bb7]/25 transition-colors">
+                      {project.number}
+                    </span>
+                    <h3 className="font-montserrat text-xl font-black text-[#0f172a] mt-2 mb-1 group-hover:text-[#001bb7] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="font-be-vietnam text-sm font-semibold text-[#475569] mb-3">
+                      {project.subtitle}
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                      <span className="px-2.5 py-0.5 bg-[#001bb7]/10 text-[#001bb7] rounded-lg font-montserrat text-[11px] font-bold">
+                        {project.meta}
+                      </span>
+                      <span className="px-2.5 py-0.5 bg-slate-100 text-[#475569] rounded-lg font-montserrat text-[11px] font-bold">
+                        {project.role}
+                      </span>
+                    </div>
+                    <p className="font-be-vietnam text-xs sm:text-sm text-[#475569] leading-relaxed max-w-3xl">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <span className="shrink-0 font-montserrat font-bold text-xs sm:text-sm text-[#001bb7] inline-flex items-center gap-2 md:pl-6 md:border-l border-slate-100 md:self-stretch">
+                    View Case Study
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </div>
+            );
+          })()}
         </div>
 
         {/* Project Detail Modal */}
