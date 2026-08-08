@@ -57,9 +57,6 @@ export const Intersection: React.FC = () => {
       <div className="max-w-[1360px] mx-auto px-6 md:px-12 w-full">
         {/* Title Header */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full font-montserrat text-xs font-black tracking-widest uppercase border border-white/20">
-            DISCIPLINARY SYNTHESIS
-          </div>
           <h2 className="font-montserrat text-3xl md:text-5xl font-black text-white tracking-tight">
             Four Perspectives. One Purpose.
           </h2>

@@ -52,10 +52,10 @@ export const About: React.FC = () => {
                 <GraduationCap className="w-4 h-4 text-[#001bb7]" />
               </div>
               <div className="font-montserrat text-2xl font-bold text-[#001bb7] mt-1">
-                VNU HSB
+                HSB - VNU
               </div>
               <div className="font-be-vietnam text-sm text-[#454655]">
-                Business Admin & Tech
+                Management of Enterprise and Technology
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export const About: React.FC = () => {
 
           {/* Expandable Details Box on Click */}
           {selectedStat === 'education' && (
-            <div className="p-4 bg-white border border-[#001bb7]/30 rounded-xl shadow-sm space-y-2 animate-fadeIn">
+            <div className="p-4 bg-white border border-[#001bb7]/30 rounded-xl shadow-sm space-y-2">
               <div className="flex items-center gap-2 font-montserrat font-bold text-sm text-[#001bb7]">
                 <BookOpen className="w-4 h-4" />
                 VNU Hanoi School of Business and Management (HSB)
@@ -94,7 +94,7 @@ export const About: React.FC = () => {
           )}
 
           {selectedStat === 'performance' && (
-            <div className="p-4 bg-white border border-[#b20982]/30 rounded-xl shadow-sm space-y-2 animate-fadeIn">
+            <div className="p-4 bg-white border border-[#b20982]/30 rounded-xl shadow-sm space-y-2">
               <div className="flex items-center gap-2 font-montserrat font-bold text-sm text-[#b20982]">
                 <Award className="w-4 h-4" />
                 Academic Honors & Track Record

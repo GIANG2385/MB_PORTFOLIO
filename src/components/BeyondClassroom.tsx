@@ -130,9 +130,6 @@ export const BeyondClassroom: React.FC = () => {
       <div className="max-w-[1360px] mx-auto px-6 md:px-12 w-full">
         {/* Header */}
         <div className="mb-8 text-center md:text-left">
-          <div className="inline-block px-3.5 py-1 bg-[#b20982]/10 text-[#b20982] rounded-full font-montserrat text-xs font-black uppercase tracking-wider mb-2">
-            HOLISTIC GROWTH
-          </div>
           <h2 className="font-montserrat text-3xl md:text-4xl font-black text-[#001bb7]">
             Beyond the Classroom
           </h2>
@@ -206,12 +203,6 @@ export const BeyondClassroom: React.FC = () => {
 
       {/* Infinite Running Marquee */}
       <div className="w-full overflow-hidden pt-3 pb-6 space-y-4 bg-slate-900/5 py-6 border-y border-slate-200">
-        <div className="max-w-[1360px] mx-auto px-6 mb-1">
-          <p className="font-montserrat text-[11px] font-black text-[#001bb7] uppercase tracking-widest text-center">
-            COMMUNITY ACTIVITIES & EVENT MOMENTS
-          </p>
-        </div>
-
         {/* Marquee Row 1 (Scrolling Left) */}
         <div className="relative w-full overflow-hidden">
           <div className="animate-marquee-left gap-4 px-2">

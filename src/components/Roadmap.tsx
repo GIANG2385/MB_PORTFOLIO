@@ -42,10 +42,6 @@ export const Roadmap: React.FC = () => {
   return (
     <section className="min-h-screen w-full flex flex-col justify-center py-16 md:py-24 bg-[#001bb7] text-white relative">
       <div className="max-w-[1360px] mx-auto px-6 text-center w-full">
-        <div className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full font-montserrat text-xs font-black tracking-widest uppercase border border-white/20 mb-3">
-          CAREER TRAJECTORY
-        </div>
-
         <h2 className="font-montserrat text-3xl md:text-5xl font-black text-white tracking-tight mb-12">
           Roadmap to the Future
         </h2>

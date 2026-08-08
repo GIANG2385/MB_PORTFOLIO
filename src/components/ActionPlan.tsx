@@ -61,7 +61,7 @@ export const ActionPlan: React.FC = () => {
   ];
 
   return (
-    <section className="w-full flex flex-col justify-center py-12 md:py-16 bg-white">
+    <section className="min-h-screen w-full flex flex-col justify-center py-12 md:py-16 bg-white">
       <div className="max-w-[1360px] mx-auto px-6 md:px-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column: Why MB Pioneer */}

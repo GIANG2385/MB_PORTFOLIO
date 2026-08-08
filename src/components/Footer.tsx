@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
         <div>
           <div className="font-montserrat text-2xl font-bold text-white mb-1">NNHG</div>
           <p className="text-white/60 text-xs">
-            © 2024 Nguyễn Ngọc Hoàng Giang. Kinetic Ambassador.
+            Nguyễn Ngọc Hoàng Giang. MB PIONEER AMBASSADOR GEN 7
           </p>
         </div>
 
@@ -41,9 +41,6 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4 mt-2">
-            <span className="text-white/40 text-[11px]">
-              Business Administration & Technology Student (VNU HSB)
-            </span>
             <button
               onClick={scrollToTop}
               className="p-2 bg-white/10 hover:bg-white/20 rounded-full text-white text-xs transition-all flex items-center gap-1"
