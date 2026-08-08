@@ -13,7 +13,7 @@ export const ThankYou: React.FC = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="/cv/Nguyen-Ngoc-Hoang-Giang-CV.pdf"
+              href="/CV.pdf"
               target="_blank"
               rel="noreferrer"
               className="px-6 py-2.5 rounded-lg font-montserrat font-semibold text-sm border-2 border-[#001bb7] text-[#001bb7] hover:bg-[#001bb7]/5 transition-all"
@@ -21,7 +21,7 @@ export const ThankYou: React.FC = () => {
               Preview CV
             </a>
             <a
-              href="/cv/Nguyen-Ngoc-Hoang-Giang-CV.pdf"
+              href="/CV.pdf"
               download
               className="px-6 py-2.5 rounded-lg font-montserrat font-semibold text-sm bg-[#001bb7] text-white hover:bg-[#001080] transition-all shadow-sm"
             >
