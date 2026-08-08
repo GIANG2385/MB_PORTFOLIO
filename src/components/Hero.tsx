@@ -3,7 +3,6 @@ import { Sparkles, ChevronDown } from 'lucide-react';
 import { StarryBackgroundCanvas } from './StarryBackgroundCanvas';
 
 interface HeroProps {
-  onOpenResume?: () => void;
   onOpenConnect?: () => void;
 }
 

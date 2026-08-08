@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   onOpenConnect: () => void;
-  onOpenResume: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect, onOpenResume }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect }) => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,16 +51,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect, onOpenResume }) =
       }`}
     >
       <div className="flex justify-between items-center px-6 md:px-12 max-w-[1360px] mx-auto">
-        {/* Brand Logo */}
-        <a
-          href="#hero"
-          className={`font-montserrat text-2xl font-bold tracking-tight hover:opacity-90 transition-opacity ${
-            isScrolled ? 'text-[#001bb7]' : 'text-white'
-          }`}
-        >
-          NNHG
-        </a>
-
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-2">
           {navLinks.map((link) => {
@@ -88,15 +77,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect, onOpenResume }) =
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <button
-            onClick={onOpenResume}
-            className={`font-montserrat text-sm font-semibold px-3 py-1.5 flex items-center gap-1 transition-colors ${
-              isScrolled ? 'text-[#001bb7] hover:text-[#001080]' : 'text-white/90 hover:text-white'
-            }`}
-          >
-            CV Preview
-            <ArrowUpRight className="w-4 h-4" />
-          </button>
           <button
             id="connect-nav-button"
             onClick={onOpenConnect}
@@ -148,17 +128,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConnect, onOpenResume }) =
                 {link.name}
               </a>
             ))}
-            <div className="pt-2 border-t border-gray-100 flex flex-col gap-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenResume();
-                }}
-                className="w-full text-left font-montserrat text-sm font-semibold text-[#001bb7] py-2 px-3"
-              >
-                📄 Download / View Resume
-              </button>
-            </div>
           </div>
         </div>
       )}
