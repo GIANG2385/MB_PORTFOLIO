@@ -142,13 +142,15 @@ export const Projects: React.FC = () => {
                 )}
                 <div className="p-6 flex flex-col justify-between flex-grow">
                   <div>
-                    <span className="font-montserrat text-3xl font-black text-[#001bb7]/15 group-hover:text-[#001bb7]/25 transition-colors">
-                      {project.number}
-                    </span>
-                    <h3 className="font-montserrat text-xl font-black text-[#0f172a] mt-2 mb-1 group-hover:text-[#001bb7] transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="font-be-vietnam text-sm font-semibold text-[#475569] mb-3">
+                    <div className="flex items-baseline gap-3">
+                      <span className="font-montserrat text-2xl font-black text-[#001bb7]/25 group-hover:text-[#001bb7]/40 transition-colors shrink-0">
+                        {project.number}
+                      </span>
+                      <h3 className="font-montserrat text-xl font-black text-[#0f172a] group-hover:text-[#001bb7] transition-colors">
+                        {project.title}
+                      </h3>
+                    </div>
+                    <p className="font-be-vietnam text-sm font-semibold text-[#475569] mt-1.5 mb-3">
                       {project.subtitle}
                     </p>
                     <div className="flex flex-wrap items-center gap-2 mb-4">
@@ -184,13 +186,15 @@ export const Projects: React.FC = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                   <div className="flex-1">
-                    <span className="font-montserrat text-3xl font-black text-[#001bb7]/15 group-hover:text-[#001bb7]/25 transition-colors">
-                      {project.number}
-                    </span>
-                    <h3 className="font-montserrat text-xl font-black text-[#0f172a] mt-2 mb-1 group-hover:text-[#001bb7] transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="font-be-vietnam text-sm font-semibold text-[#475569] mb-3">
+                    <div className="flex items-baseline gap-3">
+                      <span className="font-montserrat text-2xl font-black text-[#001bb7]/25 group-hover:text-[#001bb7]/40 transition-colors shrink-0">
+                        {project.number}
+                      </span>
+                      <h3 className="font-montserrat text-xl font-black text-[#0f172a] group-hover:text-[#001bb7] transition-colors">
+                        {project.title}
+                      </h3>
+                    </div>
+                    <p className="font-be-vietnam text-sm font-semibold text-[#475569] mt-1.5 mb-3">
                       {project.subtitle}
                     </p>
                     <div className="flex flex-wrap items-center gap-2 mb-4">
