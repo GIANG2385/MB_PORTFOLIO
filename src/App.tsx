@@ -8,6 +8,7 @@ import { BeyondClassroom } from './components/BeyondClassroom';
 import { FlowDiagram } from './components/FlowDiagram';
 import { ActionPlan } from './components/ActionPlan';
 import { Roadmap } from './components/Roadmap';
+import { ThankYou } from './components/ThankYou';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
 
@@ -33,6 +34,7 @@ export default function App() {
         <FlowDiagram />
         <ActionPlan />
         <Roadmap />
+        <ThankYou />
       </main>
 
       {/* Footer */}
