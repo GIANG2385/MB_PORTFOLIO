@@ -1,27 +1,17 @@
 export interface ProjectItem {
   id: string;
+  number: string;
   title: string;
-  tag: string;
-  category: 'healthcare' | 'fullstack' | 'fintech';
+  subtitle: string;
+  meta: string;
+  role: string;
+  link: string;
   description: string;
-  learning: string;
-  tagBg: string;
-  tagColor: string;
-  accentBorder: string;
-  image?: string;
-  badges?: string[];
-  challenge?: string;
-  impact?: string;
-  techTags?: string[];
-  lessonLearned?: string;
-  venue?: string;
-  details: {
-    problem: string;
-    solution: string;
-    techStack: string[];
-    role: string;
-    metrics?: string;
-  };
+  responsibilities: string[];
+  challenges: string;
+  outcomeProject: string[];
+  outcomeMe: string[];
+  lessonLearned: string;
 }
 
 export interface PerspectiveItem {
