@@ -10,7 +10,6 @@ export const Projects: React.FC = () => {
   const projectsList: ProjectItem[] = [
     {
       id: 'pang-pang',
-      number: '01',
       title: 'Pang Pang SmartOps',
       subtitle: 'AI-Powered Restaurant Operations Platform',
       meta: 'Personal Project · 2026',
@@ -44,7 +43,6 @@ export const Projects: React.FC = () => {
     },
     {
       id: 'aegis',
-      number: '02',
       title: 'Aegis',
       subtitle: 'AI Clinic Operations Assistant',
       meta: 'Team Project · Jul 2026',
@@ -78,7 +76,6 @@ export const Projects: React.FC = () => {
     },
     {
       id: 'bitcoin-research',
-      number: '03',
       title: 'Research',
       subtitle: 'Mixing Words and Numbers: Can Sentiment Analysis Improve Bitcoin Forecasting?',
       meta: 'Research Project · ICECH 2026',
@@ -140,16 +137,11 @@ export const Projects: React.FC = () => {
                     />
                   </div>
                 )}
-                <div className="p-6 flex flex-col justify-between flex-grow">
+                <div className="p-6 flex flex-col justify-between flex-grow text-left">
                   <div>
-                    <div className="flex items-baseline gap-3">
-                      <span className="font-montserrat text-2xl font-black text-[#001bb7]/25 group-hover:text-[#001bb7]/40 transition-colors shrink-0">
-                        {project.number}
-                      </span>
-                      <h3 className="font-montserrat text-xl font-black text-[#0f172a] group-hover:text-[#001bb7] transition-colors">
-                        {project.title}
-                      </h3>
-                    </div>
+                    <h3 className="font-montserrat text-xl font-black text-[#0f172a] group-hover:text-[#001bb7] transition-colors">
+                      {project.title}
+                    </h3>
                     <p className="font-be-vietnam text-sm font-semibold text-[#475569] mt-1.5 mb-3">
                       {project.subtitle}
                     </p>
@@ -166,7 +158,7 @@ export const Projects: React.FC = () => {
                     </p>
                   </div>
 
-                  <span className="mt-5 font-montserrat font-bold text-xs sm:text-sm text-[#001bb7] inline-flex items-center gap-2 pt-4 border-t border-slate-100">
+                  <span className="mt-3 font-montserrat font-bold text-xs sm:text-sm text-[#001bb7] inline-flex items-center gap-2 pt-3 border-t border-slate-100">
                     View Case Study
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -184,16 +176,11 @@ export const Projects: React.FC = () => {
                 onClick={() => setActiveProject(project)}
                 className="group bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-left">
                   <div className="flex-1">
-                    <div className="flex items-baseline gap-3">
-                      <span className="font-montserrat text-2xl font-black text-[#001bb7]/25 group-hover:text-[#001bb7]/40 transition-colors shrink-0">
-                        {project.number}
-                      </span>
-                      <h3 className="font-montserrat text-xl font-black text-[#0f172a] group-hover:text-[#001bb7] transition-colors">
-                        {project.title}
-                      </h3>
-                    </div>
+                    <h3 className="font-montserrat text-xl font-black text-[#0f172a] group-hover:text-[#001bb7] transition-colors">
+                      {project.title}
+                    </h3>
                     <p className="font-be-vietnam text-sm font-semibold text-[#475569] mt-1.5 mb-3">
                       {project.subtitle}
                     </p>

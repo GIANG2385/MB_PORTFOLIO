@@ -1,6 +1,5 @@
 export interface ProjectItem {
   id: string;
-  number: string;
   title: string;
   subtitle: string;
   meta: string;
