@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import { Award, Heart, Globe2, Sparkles, CheckCircle2, Users, Flame, BookOpen, HandHeart } from 'lucide-react';
 
-import greenSummerImg from '../assets/images/green_summer_volunteer_1786197411259.jpg';
-import scholarshipImg from '../assets/images/scholarship_award_ceremony_1786197439643.jpg';
-import exchangeImg from '../assets/images/international_exchange_program_1786197464944.jpg';
-import mentorshipImg from '../assets/images/youth_mentorship_program_1786197492022.jpg';
-import forumImg from '../assets/images/youth_opportunities_forum_1786197522326.jpg';
-import galaImg from '../assets/images/cultural_ambassador_gala_1786197550885.jpg';
-import bloodDonationImg from '../assets/images/blood_donation_campaign_1786197578740.jpg';
-import cleanupImg from '../assets/images/community_environmental_cleanup_1786197602880.jpg';
+import chuNhatXanhImg from '../assets/beyond-classroom/chu-nhat-xanh.jpg';
+import hocBongKbsvImg from '../assets/beyond-classroom/hoc-bong-kbsv.jpg';
+import hyundaiJumpSchoolImg from '../assets/beyond-classroom/hyundai-jump-school.jpg';
+import suGiaNhanAiImg from '../assets/beyond-classroom/su-gia-nhan-ai-du-an-cho-em.jpg';
+import youthOppEventTeamImg from '../assets/beyond-classroom/youth-opportunities-vietnam-event-team.jpg';
+import donThuTuongImg from '../assets/beyond-classroom/don-thu-tuong-new-zealand.jpg';
+import hienMauImg from '../assets/beyond-classroom/hien-mau-tinh-nguyen.jpg';
+import muaHeXanhImg from '../assets/beyond-classroom/mua-he-xanh.jpg';
+import ngayHoiVieclamImg from '../assets/beyond-classroom/ngay-hoi-viec-lam.jpg';
+import pathToIvyLeagueImg from '../assets/beyond-classroom/path-to-ivy-league.jpg';
+import hamKimChiImg from '../assets/beyond-classroom/ham-kim-chi-event-team.jpg';
+import troGiangTiengHanImg from '../assets/beyond-classroom/tro-giang-lop-tieng-han.jpg';
+import banhMiTuTamImg from '../assets/beyond-classroom/banh-mi-tu-tam.jpg';
+import hoiThaoHsbImg from '../assets/beyond-classroom/hoi-thao-hsb.jpg';
+import sinhVienTieuBieuImg from '../assets/beyond-classroom/sinh-vien-tieu-bieu-hsb.jpg';
+import youthOppVietnamImg from '../assets/beyond-classroom/youth-opportunities-vietnam.jpg';
+import daiBieuDaiHoiDoanImg from '../assets/beyond-classroom/dai-bieu-dai-hoi-doan-tncs-hcm.jpg';
 
 export const BeyondClassroom: React.FC = () => {
   const [selectedTopic, setSelectedTopic] = useState<'leading' | 'serving' | 'connecting' | null>(null);
@@ -20,7 +29,6 @@ export const BeyondClassroom: React.FC = () => {
       icon: Flame,
       bgClass: 'bg-[#001bb7]/10 text-[#001bb7]',
       colorClass: 'text-[#001bb7]',
-      image: forumImg,
       description: 'Coordinating cross-functional student teams at PFC, Youth Opportunities, and hackathon competitions.',
       highlights: [
         'Vice Project Director at Project For Children (PFC): Directed youth literacy and community outreach.',
@@ -34,7 +42,6 @@ export const BeyondClassroom: React.FC = () => {
       icon: HandHeart,
       bgClass: 'bg-[#b20982]/10 text-[#b20982]',
       colorClass: 'text-[#b20982]',
-      image: greenSummerImg,
       description: 'Hyundai Jump School mentor, Green Summer volunteer, and language teacher for underprivileged children.',
       highlights: [
         'Hyundai Jump School Mentorship: Conducted weekly tutoring and digital skill sessions.',
@@ -48,7 +55,6 @@ export const BeyondClassroom: React.FC = () => {
       icon: Globe2,
       bgClass: 'bg-[#f1e800]/30 text-[#656100]',
       colorClass: 'text-[#656100]',
-      image: exchangeImg,
       description: 'Celebrating cultural heritage at VN-Korea fairs and representing Reading Culture initiatives.',
       highlights: [
         'Multicultural Ambassador: Facilitated dialogue and youth exchange at Vietnam-Korea cultural fairs.',
@@ -61,67 +67,92 @@ export const BeyondClassroom: React.FC = () => {
   // Gallery Photos for the running marquee
   const marqueePhotosRow1 = [
     {
-      title: 'Chiến Dịch Tình Nguyện Mùa Hè Xanh',
-      subtitle: 'Hành Trình Tình Nguyện Na Hang 2024',
-      img: greenSummerImg,
+      title: 'Chủ Nhật Xanh',
+      subtitle: '17/03/2024',
+      img: chuNhatXanhImg,
     },
     {
-      title: 'Học Bổng Nhà Khoa Học Trẻ KBSV',
-      subtitle: 'ĐHQGHN & KB Securities Award 2024 - 2025',
-      img: scholarshipImg,
+      title: 'Học Bổng KBSV',
+      subtitle: '16/05/2025',
+      img: hocBongKbsvImg,
     },
     {
-      title: 'Chương Trình Trao Đổi HSB & Morioka Chuo',
-      subtitle: 'Giao Lưu Văn Hoá & Học Thuật Quốc Tế',
-      img: exchangeImg,
+      title: 'Hyundai Jump School',
+      subtitle: 'Volunteer Mentorship Program',
+      img: hyundaiJumpSchoolImg,
     },
     {
-      title: 'Hyundai Jump School Vietnam',
-      subtitle: 'Tình Nguyện Viên Giáo Dục & Mentorship',
-      img: mentorshipImg,
+      title: 'Sứ Giả Nhân Ái',
+      subtitle: 'Dự Án Cho Em',
+      img: suGiaNhanAiImg,
     },
     {
-      title: 'Dự Án Cho Em (PFC)',
-      subtitle: 'Sứ Giả Nhân Ái Mùa 4 - Hỗ Trợ Trẻ Em',
-      img: forumImg,
+      title: 'Youth Opportunities Vietnam',
+      subtitle: 'Thành Viên Ban Sự Kiện',
+      img: youthOppEventTeamImg,
     },
     {
-      title: 'Đại Sứ Văn Hoá HSB & Gala Dinner',
-      subtitle: 'Lễ Tuyên Dương & Celebration Dinner',
-      img: galaImg,
+      title: 'Đón Thủ Tướng New Zealand',
+      subtitle: 'State Visit Reception',
+      img: donThuTuongImg,
+    },
+    {
+      title: 'Hiến Máu Tình Nguyện',
+      subtitle: '26/03/2025',
+      img: hienMauImg,
+    },
+    {
+      title: 'Mùa Hè Xanh',
+      subtitle: 'Green Summer Volunteer Campaign',
+      img: muaHeXanhImg,
+    },
+    {
+      title: 'Ngày Hội Việc Làm',
+      subtitle: '07 - 08/07/2025',
+      img: ngayHoiVieclamImg,
     },
   ];
 
   const marqueePhotosRow2 = [
     {
-      title: 'Chương Trình Hiến Máu Vân Thanh Niên Chí',
-      subtitle: 'Hiến Máu Tình Nguyện Cứu Người',
-      img: bloodDonationImg,
+      title: 'Path to Ivy League',
+      subtitle: 'Academic Guidance Program',
+      img: pathToIvyLeagueImg,
     },
     {
-      title: 'Hoạt Động Tình Nguyện VNU HSB',
-      subtitle: 'Bữa Cơm 0 Đồng & Vệ Sinh Môi Trường',
-      img: cleanupImg,
+      title: 'Hầm Kim Chi',
+      subtitle: 'Thành Viên Ban Sự Kiện',
+      img: hamKimChiImg,
+    },
+    {
+      title: 'Trợ Giảng Lớp Tiếng Hàn',
+      subtitle: 'Korean Language Teaching Assistant',
+      img: troGiangTiengHanImg,
+    },
+    {
+      title: 'Bánh Mì Từ Tâm',
+      subtitle: 'Community Kindness Campaign',
+      img: banhMiTuTamImg,
+    },
+    {
+      title: 'Hội Thao HSB',
+      subtitle: '13/04/2025',
+      img: hoiThaoHsbImg,
+    },
+    {
+      title: 'Sinh Viên Tiêu Biểu HSB',
+      subtitle: 'Outstanding Student Recognition',
+      img: sinhVienTieuBieuImg,
     },
     {
       title: 'Youth Opportunities Vietnam',
-      subtitle: 'Ban Sự Kiện & Tuyển Gen Sandstone Curve',
-      img: forumImg,
+      subtitle: 'National Youth Networking Forum',
+      img: youthOppVietnamImg,
     },
     {
-      title: 'KBSV - VNU Young Scientist Scholar',
-      subtitle: 'Lễ Trao Học Bổng & Vinh Danh Học Thuật',
-      img: scholarshipImg,
-    },
-    {
-      title: 'Mùa Hè Xanh Tuyên Quang',
-      subtitle: 'Cùng Thanh Niên Xây Dựng Cộng Đồng',
-      img: greenSummerImg,
-    },
-    {
-      title: 'ĐHQGHN International Youth Exchange',
-      subtitle: 'Kết Nối Sinh Viên Việt - Nhật',
-      img: exchangeImg,
+      title: 'Đại Biểu Đại Hội Đoàn TNCS HCM',
+      subtitle: '18/12/2024',
+      img: daiBieuDaiHoiDoanImg,
     },
   ];
 
