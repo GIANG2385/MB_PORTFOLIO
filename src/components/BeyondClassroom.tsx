@@ -18,6 +18,8 @@ import hoiThaoHsbImg from '../assets/beyond-classroom/hoi-thao-hsb.jpg';
 import sinhVienTieuBieuImg from '../assets/beyond-classroom/sinh-vien-tieu-bieu-hsb.jpg';
 import youthOppVietnamImg from '../assets/beyond-classroom/youth-opportunities-vietnam.jpg';
 import daiBieuDaiHoiDoanImg from '../assets/beyond-classroom/dai-bieu-dai-hoi-doan-tncs-hcm.jpg';
+import tinhNguyenVienHjs6Img from '../assets/beyond-classroom/tinh-nguyen-vien-hjs6.jpg';
+import duAnChoEmImg from '../assets/beyond-classroom/du-an-cho-em.jpg';
 
 export const BeyondClassroom: React.FC = () => {
   const [selectedTopic, setSelectedTopic] = useState<'leading' | 'serving' | 'connecting' | null>(null);
@@ -111,6 +113,11 @@ export const BeyondClassroom: React.FC = () => {
       subtitle: '07 - 08/07/2025',
       img: ngayHoiVieclamImg,
     },
+    {
+      title: 'Dự Án Cho Em',
+      subtitle: 'Việc Tử Tế - VTV',
+      img: duAnChoEmImg,
+    },
   ];
 
   const marqueePhotosRow2 = [
@@ -153,6 +160,11 @@ export const BeyondClassroom: React.FC = () => {
       title: 'Đại Biểu Đại Hội Đoàn TNCS HCM',
       subtitle: '18/12/2024',
       img: daiBieuDaiHoiDoanImg,
+    },
+    {
+      title: 'Tình Nguyện Viên HJS6',
+      subtitle: 'Hyundai Jump School Volunteer',
+      img: tinhNguyenVienHjs6Img,
     },
   ];
 

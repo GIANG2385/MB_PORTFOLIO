@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GraduationCap, Award, BookOpen, Heart } from 'lucide-react';
+import portraitImg from '../assets/about-portrait.jpg';
 
 export const About: React.FC = () => {
   const [selectedStat, setSelectedStat] = useState<'education' | 'performance' | null>(null);
@@ -14,9 +15,8 @@ export const About: React.FC = () => {
         <div className="md:col-span-5 relative">
           <div className="aspect-square rounded-2xl overflow-hidden shadow-xl border-8 border-white bg-white group">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvTDuybpevNMbLt-HyQSLDL4-OuiLx8lrsJL-i2TbAdn4a9cKsqJ_IA4ywWIaHasxN9owre0aiAmAoP2DIJ-AztqfWF7AooLO5Ek0KOFRquGm5CluwwSgldGpVM-qy3kseGceypvsCfRVxkC1yT5QBBclp_8pogkw8J1bCOxKTtYxm_Y4Dr4tRN-K0BK4OOff50nQ6m3F5OSKe75hx-BwP-vDEX2hptvrDYgbEi6hSSeZCSbj0IVr6"
+              src={portraitImg}
               alt="Nguyễn Ngọc Hoàng Giang portrait"
-              referrerPolicy="no-referrer"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
